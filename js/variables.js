@@ -25,6 +25,8 @@ const ADMIN_PART2_PAGE = document.querySelector(".admin__p2");
 const STORAGE_PAGE = document.querySelector(".storage");
 const STORAGE_MAIN_IMG = document.querySelector(".storage__mainImg");
 const LAYOUT_HEADER_CONTAINER = document.querySelector(".layout__header--logo");
+const LAYOUT_HEADER_ADMIN_1_CONTAINER = document.querySelector(".header__logo--admin-p1");
+const LAYOUT_HEADER_ADMIN_2_CONTAINER = document.querySelector(".header__logo--admin-p2");
 const HOME_DOSE_BTN = document.querySelector(".home__action--dose");
 const HOME_PREPARATION_BTN = document.querySelector(
   ".home__action--preparation"

@@ -210,6 +210,10 @@ b {
 
 }
 
+.layout  .header__logo--admin-p1, .layout  .header__logo--admin-p2{
+    display: none;
+}
+
 .layout {
     background-image: url("../images/shared-bg-06.png");
     background-position: center;

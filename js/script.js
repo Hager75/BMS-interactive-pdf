@@ -32,11 +32,14 @@ function goHome() {
 }
 
 function showAdminSubSection(subSection, showIndex, hideIndex) {
-  LAYOUT_HEADER_CONTAINER.classList.add(subSection[showIndex].headerImgClass);
-  LAYOUT_HEADER_CONTAINER.classList.remove(
-    subSection[hideIndex].headerImgClass
-  );
-  LAYOUT_CHOICE_IMG.src = subSection[showIndex].headerImg;
+  LAYOUT_HEADER_CONTAINER.style.display = "none";
+  if (subSection[showIndex].headerImg.includes("p2")) {
+    LAYOUT_HEADER_ADMIN_2_CONTAINER.style.display = "block";
+    LAYOUT_HEADER_ADMIN_1_CONTAINER.style.display = "none";
+  } else {
+    LAYOUT_HEADER_ADMIN_2_CONTAINER.style.display = "none";
+    LAYOUT_HEADER_ADMIN_1_CONTAINER.style.display = "block";
+  }
   subSection[showIndex].section.style.display = "flex";
   subSection[hideIndex].section.style.display = "none";
 }
@@ -45,17 +48,24 @@ function showStorageSubSection(subSection, selectedIndex) {
   STORAGE_MAIN_IMG.src = subSection[selectedIndex].imgSrc;
 }
 
+function closeVideo() {
+  VIDEO_PAGE.style.display = "none";
+  VIDEO_WRAPPER.pause();
+  VIDEO_WRAPPER.currentTime = 0;
+}
+
 function goToSelectedSection(sectionInfo) {
   LAYOUT_CHOICE_IMG.src = sectionInfo.headerImg;
   LAYOUT_NAV.src = sectionInfo.navImg;
-  VIDEO_PAGE.style.display = "none";
+  closeVideo();
   INFO_LAYER.style.display = "none";
   WATCH_VIDEO_BTN.style.display = sectionInfo.isShowWatchVideoBtn
     ? "block"
     : "none";
+  LAYOUT_HEADER_ADMIN_2_CONTAINER.style.display = "none";
+  LAYOUT_HEADER_ADMIN_1_CONTAINER.style.display = "none";
+  LAYOUT_HEADER_CONTAINER.style.display = "block";
 
-  LAYOUT_HEADER_CONTAINER.classList.remove("header__logo--admin-p1");
-  LAYOUT_HEADER_CONTAINER.classList.remove("header__logo--admin-p2");
   if (sectionInfo.subSections && !sectionInfo.subSections[0].imgSrc) {
     if (currentPage === 4) {
       showAdminSubSection(sectionInfo.subSections, 1, 0);
@@ -69,7 +79,7 @@ function goToSelectedSection(sectionInfo) {
       showStorageSubSection(sectionInfo.subSections, 0);
     }
   }
-    sectionInfo.section.style.display = "flex";
+  sectionInfo.section.style.display = "flex";
   sectionInfo.hiddenSections.map((section) => {
     section.style.display = "none";
   });
@@ -143,7 +153,7 @@ function showVideoPage() {
 
 CLOSE_BTN.addEventListener("click", () => {
   LAYOUT_PAGE.style.display = "flex";
-  VIDEO_PAGE.style.display = "none";
+  closeVideo();
 });
 
 WATCH_VIDEO_BTN.addEventListener("click", showVideoPage);
