@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Klavika Basic Regular';
+    src: url('KlavikaBasic-Regular.woff2') format('woff2'),
+        url('KlavikaBasic-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klavika Basic Medium';
+    src: url('KlavikaBasic-Medium.woff2') format('woff2'),
+        url('KlavikaBasic-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klavika Basic Bold';
+    src: url('KlavikaBasic-Bold.woff2') format('woff2'),
+        url('KlavikaBasic-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klavika Md';
+    src: url('Klavika-Medium.woff2') format('woff2'),
+        url('Klavika-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Klavika Basic Light';
+    src: url('KlavikaBasic-Light.woff2') format('woff2'),
+        url('KlavikaBasic-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
