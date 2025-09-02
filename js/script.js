@@ -152,10 +152,10 @@ function showVideoPage() {
   VIDEO_PAGE.style.display = "flex";
 }
 
-// CLOSE_BTN.addEventListener("click", () => {
-//   LAYOUT_PAGE.style.display = "flex";
-//   closeVideo();
-// });
+CLOSE_BTN.addEventListener("click", () => {
+  LAYOUT_PAGE.style.display = "flex";
+  closeVideo();
+});
 
 WATCH_VIDEO_BTN.addEventListener("click", showVideoPage);
 
