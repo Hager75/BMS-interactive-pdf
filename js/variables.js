@@ -45,7 +45,7 @@ const VIDEO_HEADER_IMG = document.querySelector(".video-header__img");
 const VIDEO_WRAPPER = document.getElementById("video");
 const VIDEO_SRC = video.querySelector("source");
 const PAGES = [LANDING_PAGE, LAYOUT_PAGE, HOME_PAGE];
-const CLOSE_BTN = document.querySelector(".close-btn");
+// const CLOSE_BTN = document.querySelector(".close-btn");
 const SECTIONS_INFO = {
   dose: {
     headerImg: `${IMG_PATH}dose-header.svg`,

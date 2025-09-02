@@ -64,7 +64,8 @@ function goToSelectedSection(sectionInfo) {
     : "none";
   LAYOUT_HEADER_ADMIN_2_CONTAINER.style.display = "none";
   LAYOUT_HEADER_ADMIN_1_CONTAINER.style.display = "none";
-  LAYOUT_HEADER_CONTAINER.style.display = "block";
+  LAYOUT_HEADER_CONTAINER.style.display = "block";  
+  VIDEO_HEADER.classList.remove('header__logo--admin');
 
   if (sectionInfo.subSections && !sectionInfo.subSections[0].imgSrc) {
     if (currentPage === 4) {
@@ -151,10 +152,10 @@ function showVideoPage() {
   VIDEO_PAGE.style.display = "flex";
 }
 
-CLOSE_BTN.addEventListener("click", () => {
-  LAYOUT_PAGE.style.display = "flex";
-  closeVideo();
-});
+// CLOSE_BTN.addEventListener("click", () => {
+//   LAYOUT_PAGE.style.display = "flex";
+//   closeVideo();
+// });
 
 WATCH_VIDEO_BTN.addEventListener("click", showVideoPage);
 
