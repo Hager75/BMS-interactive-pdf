@@ -33,7 +33,7 @@ b {
 
 .preparation,
 .adminstration,
-.storage, .home {
+.storage, .home, .layout__disabled-next-btn {
     display: none;
 }
 
@@ -221,7 +221,7 @@ b {
     width: 100%;
     /* height: 100%; */
     height: 100dvh;
-    padding: 0 0 1rem 0.8rem;
+    padding: 0 0.8rem 1rem 0.8rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -241,7 +241,15 @@ b {
 }
 
 
-
+.slide__number{
+    position: absolute;
+    top: -1dvh;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.1rem;
+    color: #004165;
+    font-family: var(--font-bold);
+}
 
 .dose-page {
     flex: 1 1 auto;
@@ -334,7 +342,7 @@ b {
 /* preparation */
 .preparation {
     flex: 1 1 auto;
-    padding-right: 0.8rem;
+    /* padding-right: 0.8rem; */
 
 }
 
@@ -366,7 +374,7 @@ b {
     flex: 0 0 auto;
     align-self: center;
     margin-left: auto;
-    padding-right: 0.8rem;
+    /* padding-right: 0.8rem; */
     display: none;
 }
 
@@ -396,10 +404,11 @@ cursor: pointer;
 /* administration  page */
 .adminstration {
     flex: 1 1 auto;
+    /* padding-right:0.8rem; */
 }
 
 .admin-p1 {
-    width: 176dvh;
+    width: 170dvh;
     max-width: 100%;
     margin: 0 auto;
 }
@@ -416,6 +425,7 @@ cursor: pointer;
     justify-content: center;
     flex: 1;
     position: relative;
+    width: 100%;
 }
 
 .admin__ref-txt {

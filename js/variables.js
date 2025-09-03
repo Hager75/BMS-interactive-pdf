@@ -46,6 +46,12 @@ const VIDEO_WRAPPER = document.getElementById("video");
 const VIDEO_SRC = video.querySelector("source");
 const PAGES = [LANDING_PAGE, LAYOUT_PAGE, HOME_PAGE];
 const CLOSE_BTN = document.querySelector(".close-btn");
+const SLIDE_NUMBER =  document.querySelector(".slide__number");
+const NEXT_ACTIVE_BTN = document.querySelector(".layout__active-next-btn");
+const NEXT_DISABLED_BTN = document.querySelector(".layout__disabled-next-btn");
+let currentPage = 0;
+let loadedCount = 0;
+const SLIDE_TEXT = `/6`;
 const SECTIONS_INFO = {
   dose: {
     headerImg: `${IMG_PATH}dose-header.svg`,
@@ -57,6 +63,7 @@ const SECTIONS_INFO = {
   preparation: {
     headerImg: `${IMG_PATH}pre-header-blue.svg`,
     isShowWatchVideoBtn: true,
+    watchVideoSlideNumber: 2,
     navImg: `${IMG_PATH}nav-pre.svg`,
     section: PREPARATION_PAGE,
     hiddenSections: [DOSE_PAGE, ADMIN_PAGE, STORAGE_PAGE],
@@ -64,6 +71,7 @@ const SECTIONS_INFO = {
   admin: {
     headerImg: `${IMG_PATH}admin-h1.svg`,
     isShowWatchVideoBtn: true,
+    watchVideoSlideNumber: 4,
     navImg: `${IMG_PATH}nav-admin.svg`,
     section: ADMIN_PAGE,
     hiddenSections: [DOSE_PAGE, PREPARATION_PAGE, STORAGE_PAGE],
@@ -85,6 +93,7 @@ const SECTIONS_INFO = {
   storgae: {
     headerImg: `${IMG_PATH}storage-blue-h.svg`,
     isShowWatchVideoBtn: true,
+    watchVideoSlideNumber: 6,
     navImg: `${IMG_PATH}nav-storage.svg`,
     section: STORAGE_PAGE,
     hiddenSections: [DOSE_PAGE, ADMIN_PAGE, PREPARATION_PAGE],
@@ -138,8 +147,7 @@ const VIDEO_MAPPER = {
     imgSrc: `${IMG_PATH}storage-white-h.svg`,
   },
 };
-let currentPage = 0;
-let loadedCount = 0;
+
 const imageUrls = [
   `${IMG_PATH}storage-img2.svg`,
   `${IMG_PATH}nav-storage.svg`,
