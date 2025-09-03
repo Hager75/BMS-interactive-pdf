@@ -408,7 +408,8 @@ cursor: pointer;
 }
 
 .admin-p1 {
-    width: 170dvh;
+    /* width: 168dvh; */
+    max-height: 70dvh;
     max-width: 100%;
     margin: 0 auto;
 }
