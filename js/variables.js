@@ -46,9 +46,12 @@ const VIDEO_WRAPPER = document.getElementById("video");
 const VIDEO_SRC = video.querySelector("source");
 const PAGES = [LANDING_PAGE, LAYOUT_PAGE, HOME_PAGE];
 const CLOSE_BTN = document.querySelector(".close-btn");
-const SLIDE_NUMBER =  document.querySelector(".slide__number");
+// const SLIDE_NUMBER =  document.querySelector(".slide__number");
 const NEXT_ACTIVE_BTN = document.querySelector(".layout__active-next-btn");
 const NEXT_DISABLED_BTN = document.querySelector(".layout__disabled-next-btn");
+const STORAGE_FIRST_SLIDE_IMG = document.querySelector(".storage__title1");
+const STORAGE_SECOND_SLIDE_IMG = document.querySelector(".storage__title2");
+
 let currentPage = 0;
 let loadedCount = 0;
 const SLIDE_TEXT = `/6`;
@@ -101,10 +104,14 @@ const SECTIONS_INFO = {
       {
         id: "part1",
         imgSrc: `${IMG_PATH}storage-img1.svg`,
+        headerImg: `${IMG_PATH}storage-s1-title.svg`,
+
       },
       {
         id: "part2",
         imgSrc: `${IMG_PATH}storage-img2.svg`,
+        headerImg: `${IMG_PATH}storage-s2-title.svg`,
+
       },
     ],
   },
@@ -192,4 +199,6 @@ const imageUrls = [
   `${IMG_PATH}landing-bg-01.png`,
   `${IMG_PATH}shared-bg-06.png`,
   `${IMG_PATH}blue-img-bg-15.png`,
+   `${IMG_PATH}storage-s2-title.svg`,
+   `${IMG_PATH}storage-s1-title.svg`
 ];

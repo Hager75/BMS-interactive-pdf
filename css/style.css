@@ -199,16 +199,16 @@ b {
 }
 
 .layout .header__logo--admin-p1,
-.popup__header .header__logo--admin {
+.popup__header .header__logo--admin , .header__logo--admin-p2{
     max-width: 34dvh !important;
 }
 
-.layout .header__logo--admin-p2 {
+/* .layout .header__logo--admin-p2 {
 
     width: 70dvh !important;
     max-width: 100% !important;
 
-}
+} */
 
 .layout  .header__logo--admin-p1, .layout  .header__logo--admin-p2{
     display: none;
@@ -241,7 +241,7 @@ b {
 }
 
 
-.slide__number{
+/* .slide__number{
     position: absolute;
     top: -1dvh;
     left: 50%;
@@ -249,7 +249,7 @@ b {
     font-size: 1.1rem;
     color: #004165;
     font-family: var(--font-bold);
-}
+} */
 
 .dose-page {
     flex: 1 1 auto;

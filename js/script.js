@@ -48,6 +48,7 @@ function showAdminSubSection(subSection, showIndex, hideIndex) {
 }
 
 function showStorageSubSection(subSection, selectedIndex) {
+  LAYOUT_CHOICE_IMG.src = subSection[selectedIndex].headerImg;
   STORAGE_MAIN_IMG.src = subSection[selectedIndex].imgSrc;
 }
 
@@ -175,7 +176,7 @@ function updateCurrentPage(newPageNumber, pageDirection = 0) {
     currentPage = newPageNumber;
   }
   currentPage += pageDirection;
-  SLIDE_NUMBER.innerHTML = `${currentPage}${SLIDE_TEXT}`;
+  // SLIDE_NUMBER.innerHTML = `${currentPage}${SLIDE_TEXT}`;
 
   updateNextBtnStatus();
 }
