@@ -128,29 +128,29 @@ const pageMapper = {
 
 const VIDEO_MAPPER = {
   2: {
-    videoSrc: `${VIDEO_PATH}chapter%202.mp4`,
+    videoSrc: `${VIDEO_PATH}preparation.mp4`,
     imgSrc: `${IMG_PATH}pre-header-white.svg`,
   },
 
   3: {
-    videoSrc: `${VIDEO_PATH}chapter%203.mp4`,
+    videoSrc: `${VIDEO_PATH}administration.mp4`,
     imgSrc: `${IMG_PATH}admin-white-header.svg`,
     additionalClass: "header__logo--admin",
   },
 
   4: {
-    videoSrc: `${VIDEO_PATH}chapter%203.mp4`,
+    videoSrc: `${VIDEO_PATH}administration.mp4`,
     imgSrc: `${IMG_PATH}admin-white-header.svg`,
     additionalClass: "header__logo--admin",
   },
 
   5: {
-    videoSrc: `${VIDEO_PATH}chapter%201.mp4`,
+    videoSrc: `${VIDEO_PATH}storage.mp4`,
     imgSrc: `${IMG_PATH}storage-white-h.svg`,
   },
 
   6: {
-    videoSrc: `${VIDEO_PATH}chapter%201.mp4`,
+    videoSrc: `${VIDEO_PATH}storage.mp4`,
     imgSrc: `${IMG_PATH}storage-white-h.svg`,
   },
 };

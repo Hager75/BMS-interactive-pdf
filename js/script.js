@@ -66,6 +66,7 @@ function goToSelectedSection(sectionInfo) {
   const showWatchBtn =
     sectionInfo.isShowWatchVideoBtn &&
     currentPage === sectionInfo.watchVideoSlideNumber;
+    
   WATCH_VIDEO_BTN.style.display = showWatchBtn ? "block" : "none";
   LAYOUT_HEADER_ADMIN_2_CONTAINER.style.display = "none";
   LAYOUT_HEADER_ADMIN_1_CONTAINER.style.display = "none";
@@ -112,18 +113,18 @@ PREV_BTN.addEventListener("click", gotoPrevPage);
 DOSE_BTNS.forEach((btn) => {
   btn.addEventListener("click", () => {
     LAYOUT_PAGE.style.display = "flex";
+    updateCurrentPage(1);
     goToSelectedSection(SECTIONS_INFO.dose);
     // currentPage = 1;
-    updateCurrentPage(1);
   });
 });
 
 PREPARATION_BTNS.forEach((btn) => {
   btn.addEventListener("click", () => {
     LAYOUT_PAGE.style.display = "flex";
+    updateCurrentPage(2);
     goToSelectedSection(SECTIONS_INFO.preparation);
     // currentPage = 2;
-    updateCurrentPage(2);
   });
 });
 
@@ -131,9 +132,9 @@ ADMIN_BTNS.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (currentPage !== 4) {
       LAYOUT_PAGE.style.display = "flex";
+      updateCurrentPage(3);
       goToSelectedSection(SECTIONS_INFO.admin);
       // currentPage = 3;
-      updateCurrentPage(3);
     }
   });
 });
@@ -142,9 +143,9 @@ STORAGE_BTNS.forEach((btn) => {
   btn.addEventListener("click", () => {
     if (currentPage !== 6) {
       LAYOUT_PAGE.style.display = "flex";
+      updateCurrentPage(5);
       goToSelectedSection(SECTIONS_INFO.storgae);
       // currentPage = 5;
-      updateCurrentPage(5);
     }
   });
 });
@@ -176,6 +177,7 @@ function updateCurrentPage(newPageNumber, pageDirection = 0) {
     currentPage = newPageNumber;
   }
   currentPage += pageDirection;
+  
   // SLIDE_NUMBER.innerHTML = `${currentPage}${SLIDE_TEXT}`;
 
   updateNextBtnStatus();
@@ -206,29 +208,29 @@ HOME_BTNS.forEach((btn) => {
 
 HOME_DOSE_BTN.addEventListener("click", () => {
   showHidePage();
-  goToSelectedSection(SECTIONS_INFO.dose);
   updateCurrentPage(1);
+  goToSelectedSection(SECTIONS_INFO.dose);
 });
 
 HOME_PREPARATION_BTN.addEventListener("click", () => {
   showHidePage();
+  updateCurrentPage(2);
   goToSelectedSection(SECTIONS_INFO.preparation);
   // currentPage = 2;
-  updateCurrentPage(2);
 });
 
 HOME_ADMIN_BTN.addEventListener("click", () => {
   showHidePage();
+  updateCurrentPage(3);
   goToSelectedSection(SECTIONS_INFO.admin);
   // currentPage = 3;
-  updateCurrentPage(3);
 });
 
 HOME_STORAGE_BTN.addEventListener("click", () => {
   showHidePage();
+  updateCurrentPage(5);
   goToSelectedSection(SECTIONS_INFO.storgae);
   // currentPage = 5;
-  updateCurrentPage(5);
 });
 
 HOME_PREV_BTN.addEventListener("click", () => {
@@ -237,9 +239,9 @@ HOME_PREV_BTN.addEventListener("click", () => {
 
 HOME_NEXT_BTN.addEventListener("click", () => {
   showHidePage();
+  updateCurrentPage(1);
   goToSelectedSection(SECTIONS_INFO.dose);
   // currentPage = 1;
-  updateCurrentPage(1);
 });
 
 document.addEventListener("DOMContentLoaded", () => {
