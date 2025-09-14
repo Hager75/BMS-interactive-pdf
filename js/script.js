@@ -5,19 +5,19 @@ function toggleLoader(show) {
 
 function gotoNextPage() {
   if (currentPage < 6) {
-    // currentPage++;
     updateCurrentPage(-1, 1);
     goToSelectedSection(SECTIONS_INFO[pageMapper[currentPage]]);
   }
 }
 
 function gotoPrevPage() {
+  console.log(currentPage,"currentPage");
+  
   if (currentPage > 1) {
-    // currentPage--;
     updateCurrentPage(-1, -1);
     goToSelectedSection(SECTIONS_INFO[pageMapper[currentPage]]);
   } else if (currentPage === 1) {
-    goHome();
+    showHidePage(LAYOUT_PAGE, HOME_PAGE);
   }
 }
 
@@ -26,8 +26,8 @@ function startPdf() {
   HOME_PAGE.style.display = "flex";
 }
 
-function goHome() {
-  HOME_PAGE.style.display = "flex";
+function goToLandingPage() {
+  LANDING_PAGE.style.display = "flex";
   LAYOUT_PAGE.style.display = "none";
   INFO_LAYER.style.display = "none";
   // currentPage = 0;
@@ -66,7 +66,7 @@ function goToSelectedSection(sectionInfo) {
   const showWatchBtn =
     sectionInfo.isShowWatchVideoBtn &&
     currentPage === sectionInfo.watchVideoSlideNumber;
-    
+
   WATCH_VIDEO_BTN.style.display = showWatchBtn ? "block" : "none";
   LAYOUT_HEADER_ADMIN_2_CONTAINER.style.display = "none";
   LAYOUT_HEADER_ADMIN_1_CONTAINER.style.display = "none";
@@ -93,6 +93,8 @@ function goToSelectedSection(sectionInfo) {
 }
 
 function showHidePage(hiddenPage = HOME_PAGE, shownPage = LAYOUT_PAGE) {
+  console.log(hiddenPage,shownPage);
+  
   hiddenPage.style.display = "none";
   shownPage.style.display = "flex";
   INFO_LAYER.style.display = "none";
@@ -177,7 +179,7 @@ function updateCurrentPage(newPageNumber, pageDirection = 0) {
     currentPage = newPageNumber;
   }
   currentPage += pageDirection;
-  
+
   // SLIDE_NUMBER.innerHTML = `${currentPage}${SLIDE_TEXT}`;
 
   updateNextBtnStatus();
@@ -203,7 +205,7 @@ API_BTNS.forEach((btn) => {
 });
 
 HOME_BTNS.forEach((btn) => {
-  btn.addEventListener("click", goHome);
+  btn.addEventListener("click", goToLandingPage);
 });
 
 HOME_DOSE_BTN.addEventListener("click", () => {

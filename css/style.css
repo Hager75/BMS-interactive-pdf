@@ -14,7 +14,7 @@
 
 * {
     box-sizing: border-box;
-    scrollbar-color: #fff transparent ;
+    scrollbar-color: #fff transparent;
 }
 
 
@@ -35,7 +35,9 @@ b {
 
 .preparation,
 .adminstration,
-.storage, .home, .layout__disabled-next-btn {
+.storage,
+.home,
+.layout__disabled-next-btn {
     display: none;
 }
 
@@ -56,7 +58,6 @@ b {
 }
 
 .landing-page .header {
-    /* width: calc(100% / 3); */
     margin: -6dvh auto 1%;
     max-width: 40%;
     width: 62dvh;
@@ -87,6 +88,13 @@ b {
     width: 9rem;
     max-width: 12%;
     cursor: pointer;
+}
+
+.landing__ref-txt{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 1.5dvh;
 }
 
 /* home page  */
@@ -141,7 +149,10 @@ b {
     /* aspect-ratio: 16 / 9; */
 }
 
-.home__action--dose, .home__action--preparation,.home__action--adminstration, .home__action--storage{
+.home__action--dose,
+.home__action--preparation,
+.home__action--adminstration,
+.home__action--storage {
     width: 20%;
     height: 35%;
     border-radius: 50%;
@@ -204,18 +215,14 @@ b {
 }
 
 .layout .header__logo--admin-p1,
-.popup__header .header__logo--admin , .header__logo--admin-p2{
+.popup__header .header__logo--admin,
+.header__logo--admin-p2 {
     max-width: 34dvh !important;
 }
 
-/* .layout .header__logo--admin-p2 {
 
-    width: 70dvh !important;
-    max-width: 100% !important;
-
-} */
-
-.layout  .header__logo--admin-p1, .layout  .header__logo--admin-p2{
+.layout .header__logo--admin-p1,
+.layout .header__logo--admin-p2 {
     display: none;
 }
 
@@ -224,17 +231,11 @@ b {
     background-position: center;
     background-size: cover;
     width: 100%;
-    /* height: 100%; */
     height: 100dvh;
     padding: 0 0.8rem 1rem 0.8rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
-    /* max-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 0.8rem 0 1rem; */
 }
 
 .layout .header,
@@ -278,22 +279,19 @@ b {
     width: 12%;
     max-width: 25dvh;
     flex: 0 0 auto;
-
-    /* bottom: 0; */
-    /* left: 1.4rem; */
 }
 
 
-.approval-code{
-position: absolute;
-right: -1%;
+.approval-code {
+    position: absolute;
+    right: -1%;
     font-size: 0.5rem;
     bottom: 18dvh;
     transform: rotate(270deg);
     font-family: var(--font-regular);
 }
 
-.code-white{
+.code-white {
     color: #ffffff;
     bottom: 5dvh;
 }
@@ -314,15 +312,13 @@ right: -1%;
 .footer .prev,
 .popup__footer .next,
 .popup__footer .prev {
-    /* width: 4.5%; */
-    /* max-width: 8%; */
+
     width: 8.3dvh;
     cursor: pointer;
 }
 
 .footer .nav,
 .popup__footer .nav {
-    /* width: 45%; */
     width: 75dvh;
     position: relative;
 }
@@ -399,8 +395,8 @@ right: -1%;
     display: none;
 }
 
-.watch-btn__active{
-cursor: pointer;
+.watch-btn__active {
+    cursor: pointer;
 }
 
 .shared-popup {
@@ -425,11 +421,9 @@ cursor: pointer;
 /* administration  page */
 .adminstration {
     flex: 1 1 auto;
-    /* padding-right:0.8rem; */
 }
 
 .admin-p1 {
-    /* width: 168dvh; */
     max-height: 70dvh;
     max-width: 100%;
     margin: 0 auto;
@@ -501,7 +495,8 @@ cursor: pointer;
     margin: 0 auto;
 }
 
-.api__content, .info__content {
+.api__content,
+.info__content {
     max-height: 67dvh;
     overflow-y: auto;
     padding: 0 1.8rem;
@@ -511,28 +506,32 @@ cursor: pointer;
     font-family: var(--font-light);
     display: none;
     will-change: transform;
-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
-.api__content a, .info__content a {
+.api__content a,
+.info__content a {
     color: #ffffff;
     font-family: var(--font-light);
     text-decoration: none;
 }
 
-.api__content-title, .info__content-title {
+.api__content-title,
+.info__content-title {
     font-family: var(--font-bold);
     font-size: 0.8rem;
 }
 
-.api__content .list-header, .info__content .list-header {
+.api__content .list-header,
+.info__content .list-header {
     text-decoration: underline;
     font-family: var(--font-medium);
     margin: 0;
 
 }
 
-.api__content ul, .info__content ul {
+.api__content ul,
+.info__content ul {
     list-style: none;
     padding: 0;
 }
@@ -730,7 +729,7 @@ transform: translateZ(0);
 
     .rotateMessage-text {
         text-align: center;
-    font-family: var(--font-regular);
+        font-family: var(--font-regular);
         color: var(--dark-blue);
         font-size: 4vh;
         line-height: 1;
